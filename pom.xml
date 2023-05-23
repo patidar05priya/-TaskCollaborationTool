@@ -47,5 +47,12 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<!-- Add repository configuration -->
+	<repositories>
+		<repository>
+			<id>mvnrepository</id>
+			<url>https://mvnrepository.com</url>
+			<name>Repository from mvnrepository.com</name>
+		</repository>
+	</repositories>
 </project>
