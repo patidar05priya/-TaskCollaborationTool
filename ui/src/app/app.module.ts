@@ -8,6 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserService } from './service/user.service';
 import { FitnessGoalService } from './service/fitnessgoal.service';
+import { RouterModule } from '@angular/router';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
@@ -17,14 +19,16 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [UserService, FitnessGoalService],
   bootstrap: [AppComponent]
