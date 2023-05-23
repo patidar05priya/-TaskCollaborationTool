@@ -10,6 +10,7 @@ import { UserService } from './service/user.service';
 import { FitnessGoalService } from './service/fitnessgoal.service';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { GoalManagementComponent } from './goalmanage/goal-management.component';
 
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    GoalManagementComponent
   ],
   imports: [
     BrowserModule,

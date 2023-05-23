@@ -19,8 +19,9 @@ export class LoginComponent {
     this.authGuard.isActive = false;
     const email =  this.emailControl.value;
     const password =  this.passwordControl.value;
-  
-    this.userService.getUserByEmail(email).subscribe(
+    this.authGuard.isActive = true;
+    this.router.navigate(['/profile']); // Navig
+   /* this.userService.getUserByEmail(email).subscribe(
       (user) => {
         if (user.password == password) {
           console.log('User:', user);
@@ -35,10 +36,9 @@ export class LoginComponent {
         console.error('Error:', error);
         this.loggedIn = false;
       }
-    );
+    );*/
 
-    this.authGuard.isActive = true;
-    this.router.navigate(['/profile']); // Navig
+   
   }
   
 }
