@@ -5,20 +5,28 @@ import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
+import { UserService } from './service/user.service';
+import { FitnessGoalService } from './service/fitnessgoal.service';
+
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService, FitnessGoalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

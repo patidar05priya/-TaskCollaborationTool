@@ -21,15 +21,15 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User getUserById(Long id) {
-        return userRepository.findById(id).orElse(null);
+    public User getUserById(String email) {
+        return userRepository.findById(email).orElse(null);
     }
 
     public User createUser(User user) {
         return userRepository.save(user);
     }
 
-    public User updateUser(Long id, User user) {
+    public User updateUser(String id, User user) {
         User existingUser = userRepository.findById(id).orElse(null);
         if (existingUser != null) {
             existingUser.setEmail(user.getEmail());
@@ -41,7 +41,7 @@ public class UserService {
         return null;
     }
 
-    public boolean deleteUser(Long id) {
+    public boolean deleteUser(String id) {
         if (userRepository.existsById(id)) {
             userRepository.deleteById(id);
             return true;

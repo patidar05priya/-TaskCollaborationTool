@@ -1,5 +1,15 @@
 <h2>Register</h2>
-<form (ngSubmit)="registerForm()">
+
+<form (ngSubmit)="registerForm()">  
+  <div *ngIf="sucessfullMessage">User has been created. Please login into now</div>
+  <div>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" [formControl]="firstNameControl" required>
+  </div>
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" [formControl]="lastNameControl" required>
+  </div>
   <div>
     <label for="email">Email:</label>
     <input type="email" id="email" [formControl]="emailControl" required>
@@ -19,7 +29,5 @@
 <router-outlet></router-outlet>
 
 <nav>
-
     <a [routerLink]="['/welcome']" routerLinkActive="active">Go back</a>
-
-  </nav>
+</nav>
